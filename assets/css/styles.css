@@ -2,7 +2,7 @@
 
 :root {
 	--big-font-size: 3rem;
-	--body-color: #121417;
+	--body-color: #fffef8;
 	--body-font: 'Josefin Sans', sans-serif;
 	--container-color: hsla(var(--hue), 5%, 15%, 75%);
 	--first-color-alt: hsl(var(--hue), 64%, 45%);
@@ -164,7 +164,7 @@ img {
 }
 
 .header {
-	height: 50px;
+	height: 100px;
 	margin: 0%;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
