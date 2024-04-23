@@ -38,7 +38,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Josefin Sans";
+	font-family: "Roboto";
 }
 
 html {
@@ -176,7 +176,7 @@ img {
 }
 
 .nav {
-	font-size:xx-large;
+	font-size:x-large;
 	height: calc(var(--header-height) + 1.5rem);
 	column-gap: 2rem;
 	display: flex;
