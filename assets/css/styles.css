@@ -164,6 +164,7 @@ img {
 }
 
 .header {
+	height: 50px;
 	margin: 0%;
 	width: 100%;
 	background-color: rgb(255, 255, 255);
@@ -247,6 +248,7 @@ img {
 }
 
 .nav-link {
+	font-size: 16px;
 	color: var(--first-color);
 	font-weight: var(--font-medium);
 	transition: .3s;
