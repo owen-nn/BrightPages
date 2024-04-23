@@ -312,13 +312,13 @@ img {
 }
 
 .home-img {
-	width: 100vw; /* Set the width to 100% of the viewport width */
-  	height: 70vw; /* Set the height to 100% of the viewport height */
-	object-fit:cover; /* Ensure the image covers the entire area while maintaining aspect ratio */
-	background-position:fixed; /* Position the image as a fixed element */
-	top: 0; /* Align the top edge of the image with the top of the viewport */
-	left: 0; /* Align the left edge of the image with the left of the viewport */
-	z-index: -1; /* Position the image behind other elements */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute; /* Position the image absolutely within the container */
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 .home-title {
