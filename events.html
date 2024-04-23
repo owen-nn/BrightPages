@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/logo.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+
+    <title>Events | Bayview StuCo</title>
+
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loading">
+        <img id="breathing" src="assets/img/ombre_logo.png" >
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <!-- NAV BAR -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav-logo">
+                <img src="assets/img/ombre_logo.png" style="height: 100%;">
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./events" class="nav-link active-link">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./gallery" class="nav-link">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./archive" class="nav-link">Archive</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./map" class="nav-link">Map</a>
+                    </li>
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-btns">
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" style="width: 100%;">
+        <div style="width: 100%; position: relative; z-index:-10;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:500px; width: 200px; opacity: 10%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 60px; left:-200px; width: 300px; opacity: 15%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: -400px; left:900px; width: 1000px; opacity: 40%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:10px; width: 600px; opacity: 30%;">
+        </div>
+
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home-container container grid">
+
+                <div class="home-data">
+                    <h1 class="home-title">
+                        Events
+                    </h1>
+                    <p class="home-description">
+                        Take a look at some past and future events happening at Bayview!
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EVENTS -->
+        <div class="event-container1">
+
+            <div class="event-container2 container grid">
+                <h3 class="vertical">Upcoming Events</h3>
+
+                <template id='template'>
+                    <div class="event">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">{{day}}</div>
+                                <div class="month">{{month}}</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">{{title}}</h3>
+
+                            <div class="event-description">
+                                {{desc}}
+                            </div>
+
+                            <div class="event-timing">
+                                <img src="assets/img/time.png" alt="" /> {{time}}
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <div>
+                    <div id="items" style="max-width: 100%;"></div>
+                    <button id="loadMore" onclick="loadMoreData()">
+                        <span>Load More</span>
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+        <script src="assets/js/articles.js"></script>
+        <script>
+
+            var current = 0;
+            var i = 0
+            dataset.sort((a, b) => new Date(a.date) - new Date(b.date));
+            function loadData() {
+                let template = document.getElementById('template');
+                
+                while (current < 4) {
+                    if (new Date(dataset[i].date) < new Date()) {
+                        i += 1;
+                        continue;
+                    }
+                    try {
+                        let div = document.createElement('div');
+                        let title = document.getElementById("title");
+                        let month = document.getElementById("month");
+                        let day = document.getElementById("day");
+                        let time = document.getElementById("time");
+                        let desc = document.getElementById("desc");
+                        div.className = 'column';
+
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset[i].title).replace('{{month}}', months[new Date(dataset[i].date).getUTCMonth()]).replace('{{day}}', new Date(dataset[i].date).getUTCDate()).replace('{{time}}', dataset[i].time).replace('{{desc}}', dataset[i].description);
+                        document.getElementById('items').appendChild(div);
+
+                        current += 1;
+                        i += 1;
+                        
+                    } catch {
+                        continue;
+                        
+                    }
+                }
+            }
+
+            function loadMoreData() {
+                btnText = document.getElementById("loadMore");
+                btnText.innerHTML = "All caught up!";
+                btnText.disabled = "true";
+
+                let template = document.getElementById('template');
+                while (i < dataset.length) {
+                    if (new Date(dataset[i].date) < new Date()) {
+                        i += 1;
+                        continue;
+                    }
+                    try {
+                        let div = document.createElement('div');
+                        let title = document.getElementById("title");
+                        let month = document.getElementById("month");
+                        let day = document.getElementById("day");
+                        let time = document.getElementById("time");
+                        let desc = document.getElementById("desc");
+                        div.className = 'column';
+
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset[i].title).replace('{{month}}', months[new Date(dataset[i].date).getUTCMonth()]).replace('{{day}}', new Date(dataset[i].date).getUTCDate()).replace('{{time}}', dataset[i].time).replace('{{desc}}', dataset[i].description);
+                        document.getElementById('items').appendChild(div);
+
+                        i++;
+                    } catch {
+                        continue;
+                    }
+                }
+
+
+            }
+
+            loadData()
+
+            
+            </script>
+            <div class="event-container1">
+
+            <div class="event-container2 container grid">
+
+                <h3 class="vertical">Past Events</h3>
+
+                <template id='template2'>
+                    <div class="event">
+                        <div class="event-left">
+                            <div class="event-date">
+                                <div class="date">{{day}}</div>
+                                <div class="month">{{month}}</div>
+                            </div>
+                        </div>
+                        <div class="event-right">
+                            <h3 class="event-title">{{title}}</h3>
+
+                            <div class="event-description">
+                                {{desc}}
+                            </div>
+
+                            <div class="event-timing">
+                                <img src="assets/img/time.png" alt="" /> {{time}}
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+                <div>
+                    <div id="items2" style="max-width: 100%;"></div>
+                    <button id="loadMorePast" onclick="loadMorePastData()">
+                        <span>Load More</span>
+                    </button>
+                </div>
+
+                
+            </div>
+            <script src="assets/js/articles.js"></script>
+
+            <script>
+            var current2 = 0;
+            var j = 0
+            var dataset2 = JSON.parse(JSON.stringify(dataset));
+            dataset2.sort((a, b) => new Date(b.date) - new Date(a.date));
+            function loadPastData() {
+                let template = document.getElementById('template2');
+                
+                while (current2 < 4) {
+                    if (new Date(dataset2[j].date) >= new Date()) {
+                        j += 1;
+                        continue;
+                    }
+                    try {
+                        let div = document.createElement('div');
+                        let title = document.getElementById("title");
+                        let month = document.getElementById("month");
+                        let day = document.getElementById("day");
+                        let time = document.getElementById("time");
+                        let desc = document.getElementById("desc");
+                        div.className = 'column';
+
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset2[j].title).replace('{{month}}', months[new Date(dataset2[j].date).getUTCMonth()]).replace('{{day}}', new Date(dataset2[j].date).getUTCDate()).replace('{{time}}', dataset2[j].time).replace('{{desc}}', dataset2[j].description);
+                        document.getElementById('items2').appendChild(div);
+
+                        current2 += 1;
+                        j += 1;
+                        
+                    } catch {
+                        continue;
+                        
+                    }
+                }
+            }
+
+            function loadMorePastData() {
+                btnText = document.getElementById("loadMorePast");
+                btnText.innerHTML = "All caught up!";
+                btnText.disabled = "true";
+
+                let template = document.getElementById('template2');
+                while (j < dataset2.length) {
+                    if (new Date(dataset2[j].date) >= new Date()) {
+                        j += 1;
+                        continue;
+                    }
+                    try {
+                        let div = document.createElement('div');
+                        let title = document.getElementById("title");
+                        let month = document.getElementById("month");
+                        let day = document.getElementById("day");
+                        let time = document.getElementById("time");
+                        let desc = document.getElementById("desc");
+                        div.className = 'column';
+
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        div.innerHTML = template.innerHTML.replace('{{title}}', dataset2[j].title).replace('{{month}}', months[new Date(dataset2[j].date).getUTCMonth()]).replace('{{day}}', new Date(dataset2[j].date).getUTCDate()).replace('{{time}}', dataset2[j].time).replace('{{desc}}', dataset2[j].description);
+                        document.getElementById('items2').appendChild(div);
+
+                        j++;
+                    } catch {
+                        continue;
+                    }
+                }
+
+
+            }
+
+            loadPastData()
+        </script>
+
+    
+    <!-- FOOTER -->
+
+    <footer class="footer section">
+        <div class="footer-container container grid group-bg">
+
+
+            <div class="footer-content">
+                <h2 class="footer-title">Find Us Here!</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('https://www.instagram.com/bayviewstuco/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-instagram-line"></i>
+                        </button>
+                        <button onclick="window.open('mailto:stuco.bayview@gmail.com','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-mail-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.youtube.com/channel/UCiCdad-uRRaBZKScErpSaPQ/videos','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-youtube-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.facebook.com/BayviewStuCo/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-facebook-line"></i>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h2 class="footer-title">Resources</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('http://ta.yrdsb.ca/','_blank')" class="btn draw-border">
+                            <i></i>TeachAssist
+                        </button>
+                        <button onclick="window.open('https://app.myblueprint.ca/','_blank')" class="btn draw-border">
+                            <i></i>MyBlueprint
+                        </button>
+                        <button onclick="window.open('https://yrdsb.schoolcashonline.com','_blank')"
+                            class="btn draw-border">
+                            <i></i>SchoolCashOnline
+                        </button>
+                        <button onclick="window.open('https://yrdsb.edsby.com/','_blank')" class="btn draw-border">
+                            <i></i>Edsby
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+
+        </div>
+        <p style="text-align: center;">Made with ❤️ by Fiona Cai</p>
+
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup-icon"></i>
+    </a>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        let easeOut = [{ animation: "ease-out" }];
+        
+
+
+
+        window.onload = function() {       
+            if (!sessionStorage.getItem('shown')) {
+                sessionStorage.setItem('shown', true);
+                showScreen();
+            } else {
+                setTimeout(function(){
+                $('#loading').hide();
+            },1); 
+            }
+            
+        }
+        
+        function showScreen() {
+            setTimeout(function(){
+                $('#loading').slideUp(1500, "swing");
+            },100); 
+        }
+        
+    </script>
+</body>
+
+</html>

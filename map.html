@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="assets/css/logo.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <title>Map | Bayview StuCo</title>
+
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loading">
+        <img id="breathing" src="assets/img/ombre_logo.png" >
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <!-- NAV BAR -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav-logo">
+                <img src="assets/img/ombre_logo.png" style="height: 100%;">
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./events" class="nav-link" ;>Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./gallery" class="nav-link">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./archive" class="nav-link">Archive</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./map" class="nav-link active-link">Map</a>
+                    </li>
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            
+            <div class="nav-btns">
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" style="width: 100%;">
+        <div style="width: 100%; position: relative; z-index:-10;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:500px; width: 200px; opacity: 10%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 60px; left:-200px; width: 300px; opacity: 15%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: -400px; left:900px; width: 1000px; opacity: 40%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:10px; width: 600px; opacity: 30%;">
+        </div>
+
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home-container container grid">
+
+                <div class="home-data">
+                    <h1 class="home-title">
+                        Map
+                    </h1>
+                    <p class="home-description">
+                        3D Maps of Bayview's 3 Floors
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="event-container">
+            <div class="event-container container">
+
+            <!-- Map -->
+                <h2 class="section-title-center">Ground Floor</h2>
+                <img class="" style="padding: 0 10% 10% 10%;" src="assets/img/ground.png">
+                <h2 class="section-title-center">Second Floor</h2>
+                <img class="" style="padding: 0 10% 10% 10%;" src="assets/img/upstairs.png">
+                <h2 class="section-title-center">Basement</h2>
+                <img class="" style="padding: 0 10% 10% 10%;" src="assets/img/basement.png">
+            </div>
+        </div>
+
+
+    
+    <!-- FOOTER -->
+
+    <footer class="footer section">
+        <div class="footer-container container grid group-bg">
+
+
+            <div class="footer-content">
+                <h2 class="footer-title">Find Us Here!</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('https://www.instagram.com/bayviewstuco/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-instagram-line"></i>
+                        </button>
+                        <button onclick="window.open('mailto:stuco.bayview@gmail.com','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-mail-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.youtube.com/channel/UCiCdad-uRRaBZKScErpSaPQ/videos','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-youtube-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.facebook.com/BayviewStuCo/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-facebook-line"></i>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h2 class="footer-title">Resources</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('http://ta.yrdsb.ca/','_blank')" class="btn draw-border">
+                            <i></i>TeachAssist
+                        </button>
+                        <button onclick="window.open('https://app.myblueprint.ca/','_blank')" class="btn draw-border">
+                            <i></i>MyBlueprint
+                        </button>
+                        <button onclick="window.open('https://yrdsb.schoolcashonline.com','_blank')"
+                            class="btn draw-border">
+                            <i></i>SchoolCashOnline
+                        </button>
+                        <button onclick="window.open('https://yrdsb.edsby.com/','_blank')" class="btn draw-border">
+                            <i></i>Edsby
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+
+        </div>
+        <p style="text-align: center;">Made with ❤️ by Fiona Cai</p>
+
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup-icon"></i>
+    </a>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        let easeOut = [{ animation: "ease-out" }];
+        
+
+
+
+        window.onload = function() {       
+            if (!sessionStorage.getItem('shown')) {
+                sessionStorage.setItem('shown', true);
+                showScreen();
+            } else {
+                setTimeout(function(){
+                $('#loading').hide();
+            },1); 
+            }
+            
+        }
+        
+        function showScreen() {
+            setTimeout(function(){
+                $('#loading').slideUp(1500, "swing");
+            },100); 
+        }
+        
+    </script>
+</body>
+
+</html>

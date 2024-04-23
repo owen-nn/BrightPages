@@ -1,0 +1,19 @@
+.event-container2 {
+    grid-template-columns: 1fr 3fr;
+    padding-bottom: 5rem;
+}
+
+.event-container2 .event {
+	width: 95%
+}
+
+.event-container1 h3.vertical{
+    writing-mode: vertical-rl;
+    padding-right: 10vw;
+    line-height: 0rem;
+}
+
+.home__container {
+    display: block;
+    
+}

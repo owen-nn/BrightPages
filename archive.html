@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/logo.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+
+    <title>Archive | Bayview StuCo</title>
+
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loading">
+        <img id="breathing" src="assets/img/ombre_logo.png" >
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <!-- NAV BAR -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav-logo">
+                <img src="assets/img/ombre_logo.png" style="height: 100%;">
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./events" class="nav-link" ;>Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./gallery" class="nav-link">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./archive" class="nav-link active-link">Archive</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./map" class="nav-link">Map</a>
+                    </li>
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-btns">
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" style="width: 100%;">
+        <div style="width: 100%; position: relative; z-index:-10;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:500px; width: 200px; opacity: 10%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 60px; left:-200px; width: 300px; opacity: 15%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: -400px; left:900px; width: 1000px; opacity: 40%;">
+            <img src="assets/img/IMG_5782.PNG"
+                style="position: absolute; top: 150px; left:10px; width: 600px; opacity: 30%;">
+        </div>
+
+        <!-- HOME -->
+        <section class="home" id="home" style="min-height: 100vh;">
+            <div class="home-container container grid">
+
+                <div class="home-data">
+                    <h1 class="home-title">
+                        Archive
+                    </h1>
+                    <p class="home-description">
+                        Missed it?  No problem!
+                    </p>
+                </div>
+
+
+            </div>
+            <section class="group section container">
+                <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 class="section-title-center group-title" style="">
+                        Egg Hunt (Day 4)
+                    </h2>
+                    <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+    
+                    <div style="align-items: center; width: 100%; padding:1%" id="inputArea4" >
+                        
+    
+                    
+    
+                        <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 1vw; text-indent:1vw; " id="code4" placeholder="ABCDEF">
+                    
+                    </div>
+                    
+    
+                    <p style="padding: 2%;" id="message4">Today's code is a word in capital letters.</p>
+                    <button style="align-self: center;" id="egg" onclick="checkCode4()">Submit</button>
+    
+                    <script src="assets/js/otheregg.js">
+                    </script>
+                    </div>
+    
+    
+                    
+    
+    
+                </div>
+            </section>
+            <section class="group section container">
+                <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 class="section-title-center group-title" style="">
+                        Egg Hunt (Day 3)
+                    </h2>
+                    <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+    
+                    <div style="align-items: center; width: 100%; padding:1%" id="inputArea3" >
+                        
+    
+                    
+    
+                        <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 1vw; text-indent:1vw; " id="code3" placeholder="00ABC000">
+                    
+                    </div>
+                    
+    
+                    <p style="padding: 2%;" id="message3">Today's code is a string of numbers and capital letters.</p>
+                    <button style="align-self: center;" id="egg" onclick="checkCode3()">Submit</button>
+    
+                    <script src="assets/js/otheregg.js">
+                    </script>
+                    </div>
+    
+    
+                    
+    
+    
+                </div>
+            </section>
+            <section class="group section container">
+                <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 class="section-title-center group-title" style="">
+                        Egg Hunt (Day 2)
+                    </h2>
+                    <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+    
+                    <div style="align-items: center; width: 100%; padding:1%" id="inputArea2" >
+                        
+    
+                    
+    
+                        <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 1vw; text-indent:1vw; " id="code2" placeholder="abcdefghi">
+                    
+                    </div>
+                    
+    
+                    <p style="padding: 2%;" id="message2">Today's code is a CAPTCHA code</p>
+                    <button style="align-self: center;" id="egg" onclick="checkCode2()">Submit</button>
+    
+                    <script src="assets/js/otheregg.js">
+                    </script>
+                    </div>
+    
+    
+                    
+    
+    
+                </div>
+            </section>
+
+            <section class="group section container">
+                <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 class="section-title-center group-title" style="">
+                        Egg Hunt (Day 1)
+                    </h2>
+                    <p>If you seek the egg, listen to me: the clues that will take you to the end are anywhere and everywhere.</p>
+    
+                    <div style="align-items: center; width: 100%; padding:1%" id="inputArea1" >
+                        
+    
+                    
+    
+                        <input type="text" style="width: 100%; padding: 4%; font-size: 8vw; line-height: 80%; text-align: center; letter-spacing: 10vw; text-indent:10vw; " id="code1" placeholder="000">
+                    
+                    </div>
+                    
+    
+                    <p style="padding: 2%;" id="message1">Today's code is a 3 digit number</p>
+                    <button style="align-self: center;" id="egg" onclick="checkCode1()">Submit</button>
+    
+                    <script src="assets/js/otheregg.js">
+                    </script>
+                    </div>
+    
+    
+                    
+    
+    
+                </div>
+            </section>
+            <section class="group section container">
+                <div class="group-bg" style="display: flex; flex-direction: column; align-items: center;">
+                    <h2 class="section-title-center group-title" style="">
+                        Snake Game
+                    </h2>
+                    <canvas style="border: 1px solid white;" width="400" height="400" id="game"></canvas>
+<script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+var grid = 16;
+var count = 0;
+  
+var snake = {
+  x: 160,
+  y: 160,
+  
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+  
+  // keep track of all grids the snake body occupies
+  cells: [],
+  
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+  
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'green';
+  snake.cells.forEach(function(cell, index) {
+    
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);  
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+
+      // canvas is 400x400 which is 25x25 grids 
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+      
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's 
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+  
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+
+// start the game
+requestAnimationFrame(loop);
+</script>
+                </div>
+            </section>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <button onclick="window.location.href = 'index.html'">Back to Home</button>
+            </div>
+        </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer section">
+
+        <div class="footer-container container grid group-bg">
+
+
+            <div class="footer-content">
+                <h2 class="footer-title">Find Us Here!</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('https://www.instagram.com/bayviewstuco/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-instagram-line"></i>
+                        </button>
+                        <button onclick="window.open('mailto:stuco.bayview@gmail.com','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-mail-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.youtube.com/channel/UCiCdad-uRRaBZKScErpSaPQ/videos','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-youtube-line"></i>
+                        </button>
+                        <button
+                            onclick="window.open('https://www.facebook.com/BayviewStuCo/','_blank')"
+                            class="btn draw-border">
+                            <i class="ri-facebook-line"></i>
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h2 class="footer-title">Resources</h2>
+
+
+                <ul class="footer-data">
+                    <div class="footer-social">
+                        <button onclick="window.open('http://ta.yrdsb.ca/','_blank')" class="btn draw-border">
+                            <i></i>TeachAssist
+                        </button>
+                        <button onclick="window.open('https://app.myblueprint.ca/','_blank')" class="btn draw-border">
+                            <i></i>MyBlueprint
+                        </button>
+                        <button onclick="window.open('https://yrdsb.schoolcashonline.com','_blank')"
+                            class="btn draw-border">
+                            <i></i>SchoolCashOnline
+                        </button>
+                        <button onclick="window.open('https://yrdsb.edsby.com/','_blank')" class="btn draw-border">
+                            <i></i>Edsby
+                        </button>
+                    </div>
+                </ul>
+            </div>
+
+
+        </div>
+        <p style="text-align: center;">Made with ❤️ by Fiona Cai</p>
+
+        
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup-icon"></i>
+    </a>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        let easeOut = [{ animation: "ease-out" }];
+        
+
+
+
+        window.onload = function() {       
+            if (!sessionStorage.getItem('shown')) {
+                sessionStorage.setItem('shown', true);
+                showScreen();
+            } else {
+                setTimeout(function(){
+                $('#loading').hide();
+            },1); 
+            }
+            
+        }
+        
+        function showScreen() {
+            setTimeout(function(){
+                $('#loading').slideUp(1500, "swing");
+            },100); 
+        }
+        
+    </script>
+</body>
+
+</html>

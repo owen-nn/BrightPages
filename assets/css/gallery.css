@@ -1,0 +1,17 @@
+.masonry {
+    column-count: 2;
+    column-gap: auto;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.masonry img{
+    margin: 10%;
+    width: 80%;
+}
+  
+.home__container {
+    display: block;
+    
+}
