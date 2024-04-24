@@ -141,6 +141,30 @@ img {
 	background-color: rgb(54,91,150);
 }
 
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+  
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+  
+.content {
+	color: white;
+	padding: 20px;
+	/* Add any other styles for your content */
+}
+
 .page-section {
     position: relative;
     height: 70vh;
