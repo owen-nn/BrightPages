@@ -224,12 +224,11 @@ img {
 	align-items: center;
 	column-gap: 2rem;
 	transition: .3s;
-	height: calc(var(--header-height) - .5rem);
+	height: 5rem;
 }
 
 .nav-logo:hover {
-	color: var(--first-color);
-	filter: brightness(1.5);
+	filter: brightness(1.1);
 }
 
 .nav-btns {
