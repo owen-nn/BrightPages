@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600i,700,700i,800,900&display=swap");
 
 :root {
 	--big-font-size: 3rem;
 	--body-color: #fffef8;
-	--body-font: 'Roboto', sans-serif;
+	--body-font: 'Montserrat', sans-serif;
 	--container-color: hsla(var(--hue), 5%, 15%, 75%);
 	--first-color-alt: hsl(var(--hue), 64%, 45%);
 	--first-color-dark: hsl(var(--hue), 28%, 20%);
@@ -38,7 +38,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Roboto";
+	font-family: "Montserrat";
 }
 
 html {
@@ -202,7 +202,7 @@ img {
 }
 
 .nav {
-	font-size:1rem;
+	font-size:.9rem;
 	height: calc(var(--header-height) + 1.5rem);
 	column-gap: 8rem;
 	display: flex;
@@ -278,14 +278,14 @@ img {
 
 .nav-link {
 	color: var(--first-color);
-	font-weight: 500;
+	font-weight: 700;
 	transition: .3s;
 	
 }
 
 .btn-link {
 	color: #ffffff;
-	font-weight: 500;
+	font-weight: 700;
 	transition: .3s;
 }
 
