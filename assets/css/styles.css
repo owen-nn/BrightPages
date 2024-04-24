@@ -2,11 +2,11 @@
 
 :root {
 	--big-font-size: 3rem;
-	--body-color: #fffef8;
+	--body-color: rgb(242, 244, 248);
 	--body-font: 'Montserrat', sans-serif;
-	--container-color: hsla(var(--hue), 5%, 15%, 75%);
+	--container-color: gray;
 	--first-color-alt: hsl(var(--hue), 64%, 45%);
-	--first-color-dark: hsl(var(--hue), 28%, 20%);
+	--first-color-dark: #ffffff;
 	--first-color-light: hsl(var(--hue), 30%, 70%);
 	--first-color-lighten: hsl(var(--hue), 54%, 90%);
 	--first-color:black;
@@ -390,13 +390,16 @@ img {
 }
 
 .home-title {
-	font-size: var(--big-font-size);
+	font-size: 5rem;
 	line-height: 140%;
 	margin-bottom: var(--mb-1);
 }
 
 .home-description {
+	font-size: 1.5rem;
+	font-weight: 400;
 	margin-bottom: var(--mb-2-5);
+	color: white;
 }
 
 .home-social {
