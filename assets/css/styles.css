@@ -151,6 +151,7 @@ img {
 
 .ff-compose-container {
   position: relative; /* or position: absolute; */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   z-index: 1; /* A high value to bring it to the front */
 }
 
@@ -325,6 +326,7 @@ img {
     height: 2.5rem;
     width: 7rem;
 	border-radius: 4px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 	display: flex; /* Add this line */
   	justify-content: center; /* Add this line */
@@ -867,6 +869,7 @@ button:hover {
 }
 
 .footer-container {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 	row-gap: 3rem;
 	justify-items: center;
 }
