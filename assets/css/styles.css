@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600i,700,700i,800,900&display=swap");
 
 :root {
+	--body-height: 110vh;
 	--big-font-size: 3rem;
 	--body-color: rgb(242, 244, 248);
 	--body-font: 'Montserrat', sans-serif;
-	--container-color: gray;
+	--container-color: white;
 	--first-color-alt: hsl(var(--hue), 64%, 45%);
 	--first-color-dark: #ffffff;
 	--first-color-light: hsl(var(--hue), 30%, 70%);
-	--first-color-lighten: hsl(var(--hue), 54%, 90%);
+	--first-color-lighten: rgb(255, 204, 51);
 	--first-color:black;
 	--font-medium: 500;
 	--font-semi-bold: 600;
@@ -27,9 +28,9 @@
 	--normal-font-size: .938rem;
 	--small-font-size: .813rem;
 	--smaller-font-size: .75rem;
-	--text-color-light: hsl(var(--hue), 4%, 55%);
-	--text-color: hsl(var(--hue), 24%, 75%);
-	--title-color: hsl(var(--hue), 24%, 95%);
+	--text-color-light: gray;
+	--text-color: black;
+	--title-color: white;
 	--z-fixed: 100;
 	--z-tooltip: 10;
 }
@@ -68,11 +69,16 @@ button {
 }
 
 h1,
-h2,
 h3 {
 	color: var(--title-color);
 	font-weight: var(--font-semi-bold);
 }
+
+h2 {
+	color: var(--text-color);
+	font-weight: var(--font-semi-bold);
+}
+
 
 h1 {
 	font-size: var(--h1-font-size);
@@ -128,6 +134,8 @@ img {
 .group-bg,
 .questions {
 	background-color: var(--first-color-dark);
+	
+	
 }
 
 .bg-image{
@@ -141,28 +149,9 @@ img {
 	background-color: rgb(54,91,150);
 }
 
-body {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-  
-body::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: -1;
-}
-  
-.content {
-	color: white;
-	padding: 20px;
-	/* Add any other styles for your content */
+.ff-compose-container {
+  position: relative; /* or position: absolute; */
+  z-index: 1; /* A high value to bring it to the front */
 }
 
 .page-section {
@@ -194,6 +183,7 @@ body::before {
 	text-align: center;
 }
 
+
 .container {
 	max-width: 100%;
 	margin-left: var(--mb-1-5);
@@ -210,7 +200,8 @@ body::before {
 }
 
 .main {
-	overflow: hidden;
+	overflow: visible;
+	height: var(--body-height);
 }
 
 .header {
@@ -353,6 +344,16 @@ body::before {
 	text-decoration: underline;
 
 	color: rgb(162, 162, 162);
+}
+
+.body-text{
+	font-weight: 400; /* Increases the thickness of the text */
+	line-height: 1.8rem;/* Increases the line spacing */
+  	letter-spacing: 0.05em; /* Adjusts the spacing between characters */
+  	word-spacing: 0.1em; /* Adjusts the spacing between words */
+  	
+  	font-size: 1rem; /* Adjusts the font size */
+	color: var(--text-color); /* Sets the text color */
 }
 
 .dot {
@@ -520,7 +521,7 @@ body::before {
 }
 
 .group-title {
-	color: #FFF;
+	color: #000000;
 }
 
 .group-card {
@@ -869,7 +870,7 @@ button:hover {
 	display: inline-flex;
 	align-items: center;
 	column-gap: .5rem;
-	color: var(--title-color);
+	color: var(--text-color) !important;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: -1px;

@@ -64,9 +64,6 @@
     </header>
 
     <main class="main" style="width: 100%;">
-        
-        <img src="assets/img/newspaper.png" alt="" class="body">
-
         <!-- HOME -->
         <!--<section class="home page-section bg-image bg-blue" id="home" -->
         <section class="home h-100" id="home">
@@ -88,8 +85,31 @@
             </div>  
 
         <!-- ABOUT -->
-        </section>
+        <section class="group section container">
+            <div class="group-bg ff-compose-container" id="ff-compose" style="display: flex; flex-direction: column; align-items: left;">
+                <h2 class="section-title group-title" style="align-items:left;">
+                    What is BrightPages?
+                </h2>
+                <div class="body-text"> 
+                    <p> BrightPages shines a beacon of hope and enlightenment in the heart of correctional facilities. 
+                        As a federally incorporated non-profit organization, we are on a mission to transform the lives 
+                        of those within the prison system through the power of reading and education. With a robust network 
+                        that spans schools and bookshops, we collect a diverse range of books and channel them towards 
+                        prisons across the nation. Our work doesn't stop at donation; we delve deeper, establishing 
+                        comprehensive library systems within correctional facilities to ensure that every inmate has access 
+                        to a world of knowledge, inspiration, and hope right at their fingertips. By reinforcing existing 
+                        libraries with an abundance of books and resources, we empower vulnerable individuals to embark on 
+                        a journey of self-improvement and learning. BrightPages is more than just a non-profit; we are a 
+                        movement towards creating a more inclusive, educated, and compassionate society. Join us in turning 
+                        the page towards a brighter future for all..</p>
+                </div>
+
         
+                    
+                <a href="./gallery" class="contact-btn btn-link" style="margin-top: 2rem;">DONATE</a>
+                     
+            </div>
+        </section>
 
     </main>
 
@@ -155,7 +175,7 @@
 
 
         </div>
-        <p style="text-align: left;">© 2024 BrightPages, All Rights Reserved</p>
+        <p style="padding: 2rem; padding-bottom:0rem; text-align: left;">© 2024 BrightPages, All Rights Reserved</p>
 
         
     </footer>
@@ -171,9 +191,7 @@
 
     <script>
         let easeOut = [{ animation: "ease-out" }];
-        
-
-
+    
 
         window.onload = function() {       
             if (!sessionStorage.getItem('shown')) {
@@ -194,30 +212,7 @@
         }
         
     </script>
-    <script>
-        var countDownDate = new Date("Nov 16, 2023 17:00:00").getTime();
-        
-        var x = setInterval(function() {
-        
-          var now = new Date().getTime();
-            
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-            
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-            
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "Countdown has ended.";
-          }
-        }, 1000);
-        </script>
+    
 </body>
 
 </html>
