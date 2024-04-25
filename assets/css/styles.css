@@ -214,6 +214,11 @@ img {
 	z-index: var(--z-fixed);
 	border-radius: 0;
 	transition: .4s;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.29);
+	-moz-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.29);
+	-webkit-box-shadow: 0 3px 15px rgba(100, 100, 100, 0.29);
+	position: relative;
+	z-index: 4;
 }
 
 .nav {
