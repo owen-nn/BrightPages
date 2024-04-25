@@ -9,7 +9,7 @@
 	--first-color-alt: hsl(var(--hue), 64%, 45%);
 	--first-color-dark: #ffffff;
 	--first-color-light: hsl(var(--hue), 30%, 70%);
-	--first-color-lighten: rgb(255, 204, 51);
+	--first-color-lighten: rgb(255, 200, 45);
 	--first-color:black;
 	--font-medium: 500;
 	--font-semi-bold: 600;
@@ -315,11 +315,11 @@ img {
 .contact-btn{
 	text-shadow: .05rem .05rem 0 rgba(93, 93, 93, 0.564);
 	transition: .3s;
-	background-color: rgb(255, 204, 51);
+	background-color: rgb(255, 200, 45);
     border: none;
     height: 2.5rem;
     width: 7rem;
-	border-radius: 1.6rem;
+	border-radius: 4px;
     cursor: pointer;
 	display: flex; /* Add this line */
   	justify-content: center; /* Add this line */
@@ -477,7 +477,7 @@ img {
 	background-color: var(--first-color);
 	color: #FFF;
 	padding: 1rem 1.75rem;
-	border-radius: .5rem;
+	border-radius: 4px;
 	font-weight: var(--font-medium);
 	transition: .3s;
 }
@@ -512,7 +512,7 @@ img {
 .group-bg {
 	background-color: var(--first-color-dark);
 	padding: 3rem 2rem 2rem;
-	border-radius: 1rem;
+	border-radius:1rem;
 }
 
 .group-container {
@@ -756,7 +756,7 @@ button {
 	justify-content: left;
 	width: max-content;
 	padding: 12px;
-	border-radius: 16px;
+	border-radius: 4px;
 	margin: 10px 0;
 	font-size: 1rem;
 	display: flex;
