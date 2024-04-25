@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600i,700,700i,800,900&display=swap");
 
 :root {
-	--body-height: 110vh;
+	--body-height: 70rem;
 	--big-font-size: 3rem;
 	--body-color: rgb(242, 244, 248);
 	--body-font: 'Montserrat', sans-serif;
@@ -128,7 +128,7 @@ img {
 
 .h-100{
 	width: 100%;
-	height: 75vh;
+	height: 42rem;
 }
 
 .group-bg,
